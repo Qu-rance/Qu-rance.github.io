@@ -16,22 +16,23 @@
   <meta name="author" content="Qurance">
   <meta name="keywords" content="blog, hexo, github">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="记录在 WSL 上安装 Node.js 的过程。 参考资料：Microsoft Learn  一、安装 nvm、node.js 和 npmNode.js 的版本变化速度非常快，根据不同项目需求可能需要在多个版本的 Node.js 之间进行切换。因此可能通过安装 Node 版本管理器 nvm 来安装和管理多个版本的 Node.js，下面是安装步骤 1. 安装 nvm使用 cURL（用于在命令行中从">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://qu-rance.github.io/posts/4a17b156/">
+<meta property="og:title" content="Node.js on WSL">
+<meta property="og:url" content="http://qu-rance.github.io/posts/f5ebcee2/">
 <meta property="og:site_name" content="Qurance&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="记录在 WSL 上安装 Node.js 的过程。 参考资料：Microsoft Learn  一、安装 nvm、node.js 和 npmNode.js 的版本变化速度非常快，根据不同项目需求可能需要在多个版本的 Node.js 之间进行切换。因此可能通过安装 Node 版本管理器 nvm 来安装和管理多个版本的 Node.js，下面是安装步骤 1. 安装 nvm使用 cURL（用于在命令行中从">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-08T11:46:58.854Z">
-<meta property="article:modified_time" content="2024-07-09T09:12:52.392Z">
+<meta property="article:published_time" content="2024-07-12T06:14:13.000Z">
+<meta property="article:modified_time" content="2024-07-12T07:07:49.031Z">
 <meta property="article:author" content="Qurance">
-<meta property="article:tag" content="blog, hexo, github">
+<meta property="article:tag" content="Node.js">
+<meta property="article:tag" content="环境安装">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - Qurance&#39;s Blog</title>
+  <title>Node.js on WSL - Qurance&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -224,7 +225,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="Node.js on WSL"></span>
           
         </div>
 
@@ -240,8 +241,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-08 19:46" pubdate>
-          2024年7月8日 晚上
+        <time datetime="2024-07-12 14:14" pubdate>
+          2024年7月12日 下午
         </time>
       </span>
     
@@ -252,7 +253,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18 字
+          850 字
         
       </span>
     
@@ -263,7 +264,7 @@
         
         
         
-          1 分钟
+          8 分钟
         
       </span>
     
@@ -300,24 +301,43 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">Node.js on WSL</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <blockquote>
+<p>记录在 WSL 上安装 <strong>Node.js</strong> 的过程。</p>
+<p>参考资料：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/dev-environment/javascript/nodejs-on-wsl">Microsoft Learn</a></p>
+</blockquote>
+<h2 id="一、安装-nvm、node-js-和-npm"><a href="#一、安装-nvm、node-js-和-npm" class="headerlink" title="一、安装 nvm、node.js 和 npm"></a>一、安装 nvm、node.js 和 npm</h2><p>Node.js 的版本变化速度非常快，根据不同项目需求可能需要在多个版本的 Node.js 之间进行切换。因此可能通过安装 Node 版本管理器 <strong>nvm</strong> 来安装和管理多个版本的 Node.js，下面是安装步骤</p>
+<h3 id="1-安装-nvm"><a href="#1-安装-nvm" class="headerlink" title="1. 安装 nvm"></a>1. 安装 nvm</h3><p>使用 cURL（用于在命令行中从 Internet 下载内容的工具）执行以下命令安装 nvm：<code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash</code></p>
+<p>注：上述命令将下载并运行 <code>install.sh</code> 脚本文件，由于网络问题，实际在 WSL 运行时发现遇到报错 <code>curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 112 ms: Connection refused</code>，因此直接通过 windows 访问 <a target="_blank" rel="noopener" href="https://github.com/nvm-sh/nvm">Github 仓库</a> 下载其中的 <code>install.sh</code> 后在 WSL 中运行以完成安装</p>
+<p>输入 <code>command -v nvm</code> 后若返回 “nvm” 则说明安装成功（或通过 <code>nvm --version</code> 可以查看到版本信息）.</p>
+<h3 id="2-查看安装的-Node-版本"><a href="#2-查看安装的-Node-版本" class="headerlink" title="2. 查看安装的 Node 版本"></a>2. 查看安装的 Node 版本</h3><p>列出当前安装的 Node 版本（此时应为无）：<code>nvm ls</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash"><br>-&gt;     system<br>iojs -&gt; N/A (default)<br>node -&gt; stable (-&gt; N/A) (default)<br>unstable -&gt; N/A (default)<br>lts/* -&gt; lts/iron (-&gt; N/A)<br>lts/argon -&gt; v4.9.1 (-&gt; N/A)<br>lts/boron -&gt; v6.17.1 (-&gt; N/A)<br>lts/carbon -&gt; v8.17.0 (-&gt; N/A)<br>lts/dubnium -&gt; v10.24.1 (-&gt; N/A)<br>lts/erbium -&gt; v12.22.12 (-&gt; N/A)<br>lts/fermium -&gt; v14.21.3 (-&gt; N/A)<br>lts/gallium -&gt; v16.20.2 (-&gt; N/A)<br>lts/hydrogen -&gt; v18.20.3 (-&gt; N/A)<br>lts/iron -&gt; v20.15.0 (-&gt; N/A)<br></code></pre></td></tr></table></figure>
+<h3 id="3-安装-Node-js-的当前版本和稳定的-LTS-版本"><a href="#3-安装-Node-js-的当前版本和稳定的-LTS-版本" class="headerlink" title="3. 安装 Node.js 的当前版本和稳定的 LTS 版本"></a>3. 安装 Node.js 的当前版本和稳定的 LTS 版本</h3><ul>
+<li>安装 Node.js 的当前稳定的 LTS 版本（推荐用于生产应用程序）：<code>nvm install --lts</code></li>
+<li>安装 Node.js 的当前版本（用于测试最新的 Node.js 功能和改进，但更容易出现问题）：<code>nvm install node</code></li>
+</ul>
+<p>完成安装后，列出安装的 Node 版本：<code>nvm ls</code>。现在应会看到刚安装的两个版本。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs bash">-&gt;     v20.15.1<br>        v22.4.1<br>default -&gt; lts/* (-&gt; v20.15.1)<br>iojs -&gt; N/A (default)<br>unstable -&gt; N/A (default)<br>node -&gt; stable (-&gt; v22.4.1) (default)<br>stable -&gt; 22.4 (-&gt; v22.4.1) (default)<br>lts/* -&gt; lts/iron (-&gt; v20.15.1)<br>lts/argon -&gt; v4.9.1 (-&gt; N/A)<br>lts/boron -&gt; v6.17.1 (-&gt; N/A)<br>lts/carbon -&gt; v8.17.0 (-&gt; N/A)<br>lts/dubnium -&gt; v10.24.1 (-&gt; N/A)<br>lts/erbium -&gt; v12.22.12 (-&gt; N/A)<br>lts/fermium -&gt; v14.21.3 (-&gt; N/A)<br>lts/gallium -&gt; v16.20.2 (-&gt; N/A)<br>lts/hydrogen -&gt; v18.20.4 (-&gt; N/A)<br>lts/iron -&gt; v20.15.1<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<h3 id="4-Node-js-版本切换"><a href="#4-Node-js-版本切换" class="headerlink" title="4. Node.js 版本切换"></a>4. Node.js 版本切换</h3><p>通过命令行快速切换和使用不同版本的 node. Example:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ nvm use 16<br>Now using node v16.9.1 (npm v7.21.1)<br>$ node -v<br>v16.9.1<br>$ nvm use 14<br>Now using node v14.18.0 (npm v6.14.15)<br>$ node -v<br>v14.18.0<br>$ nvm install 12<br>Now using node v12.22.6 (npm v6.14.5)<br>$ node -v<br>v12.22.6<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>注：输入 <code>nvm use node</code> 切换到当前版本，输入 <code>nvm use --lts</code> 切换到 LTS 版本</p>
+<h2 id="二、替代版本管理器"><a href="#二、替代版本管理器" class="headerlink" title="二、替代版本管理器"></a>二、替代版本管理器</h2><blockquote>
+<p>该部分详见 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/dev-environment/javascript/nodejs-on-wsl">Microsoft Learn</a></p>
+</blockquote>
+<p>虽然 nvm 目前是最常用的节点版本管理器，但需要考虑一些替代版本管理器：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/n#installation">n</a> 是长期存在的 nvm 替代方法，该方法使用略微不同的命令来完成相同的操作，并通过 npm 而不是 bash 脚本来安装。</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Schniz/fnm#using-a-script">fnm</a> 是较新的版本管理器，它声称比 nvm 快得多。 （它还使用 Azure 管道。）</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/volta-cli/volta#installing-volta">Volta</a> 是来自 LinkedIn 团队的新版本管理器，它声称改进了速度和跨平台支持。</li>
+<li><a target="_blank" rel="noopener" href="https://asdf-vm.com/#/core-manage-asdf-vm">asdf-vm</a> 是适用于多种语言的单个 CLI，例如将 ike gvm、nvm、rbenv 和 pyenv（等）整合在一起。</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/jasongin/nvs">nvs</a>（Node 版本切换器）是跨平台的 nvm 替代方法，可与 VS Code 集成。</li>
+</ul>
 
                 
               </div>
@@ -326,6 +346,36 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/CS/" class="category-chain-item">CS</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Node-js/" class="print-no-link">#Node.js</a>
+      
+        <a href="/tags/%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" class="print-no-link">#环境安装</a>
+      
+    </div>
   
 </div>
 
@@ -335,8 +385,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://qu-rance.github.io/posts/4a17b156/</div>
+      <div>Node.js on WSL</div>
+      <div>http://qu-rance.github.io/posts/f5ebcee2/</div>
     </div>
     <div class="license-meta">
       
@@ -348,7 +398,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月8日</div>
+          <div>2024年7月12日</div>
         </div>
       
       
@@ -380,15 +430,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/f5ebcee2/" title="Node.js on WSL">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Node.js on WSL</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/posts/4a17b156/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
