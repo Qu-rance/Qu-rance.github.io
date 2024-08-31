@@ -24,7 +24,7 @@
 <meta property="og:description" content="记录在 WSL 上安装 Node.js 的过程。 参考资料：Microsoft Learn  一、安装 nvm、node.js 和 npmNode.js 的版本变化速度非常快，根据不同项目需求可能需要在多个版本的 Node.js 之间进行切换。因此可能通过安装 Node 版本管理器 nvm 来安装和管理多个版本的 Node.js，下面是安装步骤 1. 安装 nvm使用 cURL（用于在命令行中从">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-07-12T06:14:13.000Z">
-<meta property="article:modified_time" content="2024-07-12T07:18:08.120Z">
+<meta property="article:modified_time" content="2024-08-31T05:59:32.621Z">
 <meta property="article:author" content="Qurance">
 <meta property="article:tag" content="Node.js">
 <meta property="article:tag" content="环境安装">
@@ -316,7 +316,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年7月12日
+                    本文最后更新于 2024年8月31日
                   
                 
               </p>
@@ -330,7 +330,7 @@
 </blockquote>
 <h2 id="一、安装-nvm、node-js-和-npm"><a href="#一、安装-nvm、node-js-和-npm" class="headerlink" title="一、安装 nvm、node.js 和 npm"></a>一、安装 nvm、node.js 和 npm</h2><p>Node.js 的版本变化速度非常快，根据不同项目需求可能需要在多个版本的 Node.js 之间进行切换。因此可能通过安装 Node 版本管理器 <strong>nvm</strong> 来安装和管理多个版本的 Node.js，下面是安装步骤</p>
 <h3 id="1-安装-nvm"><a href="#1-安装-nvm" class="headerlink" title="1. 安装 nvm"></a>1. 安装 nvm</h3><p>使用 cURL（用于在命令行中从 Internet 下载内容的工具）执行以下命令安装 nvm：<code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash</code></p>
-<p>注：上述命令将下载并运行 <code>install.sh</code> 脚本文件，由于网络问题，实际在 WSL 运行时发现遇到报错 <code>curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 112 ms: Connection refused</code>，因此直接通过 windows 访问 <a target="_blank" rel="noopener" href="https://github.com/nvm-sh/nvm">Github 仓库</a> 下载其中的 <code>install.sh</code> 后在 WSL 中运行以完成安装</p>
+<p>注：上述命令将下载并运行 <code>install.sh</code> 脚本文件，由于网络问题，实际在 WSL 运行时发现遇到报错 <code>curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 112 ms: Connection refused</code>，因此直接通过 windows 访问 <a target="_blank" rel="noopener" href="https://github.com/nvm-sh/nvm">GitHub 仓库</a> 下载其中的 <code>install.sh</code> 后在 WSL 中运行以完成安装</p>
 <p>输入 <code>command -v nvm</code> 后若返回 “nvm” 则说明安装成功（或通过 <code>nvm --version</code> 可以查看到版本信息）.</p>
 <p>安装完成后在家目录将出现文件夹 <code>.nvm</code>，此后安装的 Node 和相应的 npm 将出现在 <code>~/.nvm/versions/node</code> 中，每个版本对应一个子文件夹</p>
 <h3 id="2-查看安装的-Node-版本"><a href="#2-查看安装的-Node-版本" class="headerlink" title="2. 查看安装的 Node 版本"></a>2. 查看安装的 Node 版本</h3><p>列出当前安装的 Node 版本（此时应为无）：<code>nvm ls</code></p>
@@ -423,7 +423,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年7月12日</div>
+          <div>2024年8月31日</div>
         </div>
       
       

@@ -16,19 +16,19 @@
   <meta name="author" content="Qurance">
   <meta name="keywords" content="blog, hexo, github">
   
-    <meta name="description" content="记录在 Windows 上配置基于输入法引擎 Rime 的小狼毫输入法 weasel 的过程 参考资料 &amp; 资源链接  Github | rime&#x2F;rime-double-pinyin 小鹤网盘 Github | rime&#x2F;weasel&#x2F;皮肤示例 Rime-See-Me   配置双拼方案从 rime 官方的 Github 仓库 中可以找到 5 个 yaml">
+    <meta name="description" content="记录在 Windows 上配置基于输入法引擎 Rime 的小狼毫输入法 weasel 的过程 参考资料 &amp; 资源链接  GitHub | rime&#x2F;rime-double-pinyin 小鹤网盘 GitHub | rime&#x2F;weasel&#x2F;皮肤示例 Rime-See-Me   配置双拼方案从 rime 官方的 GitHub 仓库 中可以找到 5 个 yaml">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Rime Configuration on Windows">
 <meta property="og:url" content="http://qu-rance.github.io/posts/718cbfab/">
 <meta property="og:site_name" content="Qurance&#39;s Blog">
-<meta property="og:description" content="记录在 Windows 上配置基于输入法引擎 Rime 的小狼毫输入法 weasel 的过程 参考资料 &amp; 资源链接  Github | rime&#x2F;rime-double-pinyin 小鹤网盘 Github | rime&#x2F;weasel&#x2F;皮肤示例 Rime-See-Me   配置双拼方案从 rime 官方的 Github 仓库 中可以找到 5 个 yaml">
+<meta property="og:description" content="记录在 Windows 上配置基于输入法引擎 Rime 的小狼毫输入法 weasel 的过程 参考资料 &amp; 资源链接  GitHub | rime&#x2F;rime-double-pinyin 小鹤网盘 GitHub | rime&#x2F;weasel&#x2F;皮肤示例 Rime-See-Me   配置双拼方案从 rime 官方的 GitHub 仓库 中可以找到 5 个 yaml">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://qu-rance.github.io/img/image1.png">
 <meta property="og:image" content="http://qu-rance.github.io/img/image2.png">
 <meta property="og:image" content="http://qu-rance.github.io/img/image3.png">
 <meta property="og:image" content="http://qu-rance.github.io/img/image4.png">
 <meta property="article:published_time" content="2024-07-13T08:48:28.000Z">
-<meta property="article:modified_time" content="2024-07-13T13:39:00.202Z">
+<meta property="article:modified_time" content="2024-08-31T05:57:53.921Z">
 <meta property="article:author" content="Qurance">
 <meta property="article:tag" content="Rime 配置">
 <meta name="twitter:card" content="summary_large_image">
@@ -320,7 +320,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年7月13日
+                    本文最后更新于 2024年8月31日
                   
                 
               </p>
@@ -332,13 +332,13 @@
 <p>记录在 Windows 上配置基于输入法引擎 <strong>Rime</strong> 的小狼毫输入法 weasel 的过程</p>
 <p>参考资料 &amp; 资源链接</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/rime/rime-double-pinyin">Github | rime&#x2F;rime-double-pinyin</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/rime/rime-double-pinyin">GitHub | rime&#x2F;rime-double-pinyin</a></li>
 <li><a target="_blank" rel="noopener" href="http://flypy.ysepan.com/">小鹤网盘</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/rime/weasel/wiki/%E7%A4%BA%E4%BE%8B">Github | rime&#x2F;weasel&#x2F;皮肤示例</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/rime/weasel/wiki/%E7%A4%BA%E4%BE%8B">GitHub | rime&#x2F;weasel&#x2F;皮肤示例</a></li>
 <li><a target="_blank" rel="noopener" href="https://bennyyip.github.io/Rime-See-Me/">Rime-See-Me</a></li>
 </ul>
 </blockquote>
-<h2 id="配置双拼方案"><a href="#配置双拼方案" class="headerlink" title="配置双拼方案"></a>配置双拼方案</h2><p>从 rime 官方的 <a target="_blank" rel="noopener" href="https://github.com/rime/rime-double-pinyin">Github 仓库</a> 中可以找到 5 个 yaml 文件，对应 5 种双拼方案</p>
+<h2 id="配置双拼方案"><a href="#配置双拼方案" class="headerlink" title="配置双拼方案"></a>配置双拼方案</h2><p>从 rime 官方的 <a target="_blank" rel="noopener" href="https://github.com/rime/rime-double-pinyin">GitHub 仓库</a> 中可以找到 5 个 yaml 文件，对应 5 种双拼方案</p>
 <figure class="highlight graphql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs graphql">double_pinyin.<span class="hljs-keyword">schema</span>.yaml <span class="hljs-comment"># 自然码双拼</span><br>double_pinyin_abc.<span class="hljs-keyword">schema</span>.yaml <span class="hljs-comment"># 智能 ABC 双拼</span><br>double_pinyin_flypy.<span class="hljs-keyword">schema</span>.yaml <span class="hljs-comment"># 小鹤双拼</span><br>double_pinyin_mspy.<span class="hljs-keyword">schema</span>.yaml <span class="hljs-comment"># MSPY 双拼</span><br>double_pinyin_pyjj.<span class="hljs-keyword">schema</span>.yaml <span class="hljs-comment"># 拼音加加双拼</span><br></code></pre></td></tr></table></figure>
 
 <p>以上输入方案均依赖于朙月拼音(luna-pinyin)，而 weasel 已经预装该方案，因此只需将相应双拼方案的 yaml 文件放入<strong>用户文件夹</strong>中，然后在 <code>default.custom.yaml</code> 中添加相应的补丁：</p>
@@ -457,7 +457,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年7月13日</div>
+          <div>2024年8月31日</div>
         </div>
       
       
